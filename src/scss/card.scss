@@ -3,13 +3,14 @@
 
 
 .card_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill(360px, 1fr));
     background-color: tan;
     margin: 1rem;
     width: 25rem;
     height: 25rem;
     text-align: center;
     box-shadow: 8px 5px 12px gray;
-    border-radius: 1rem;
 }
 
 .card_title{
@@ -34,3 +35,49 @@
 .button:hover{
     background-color: olive;
 }
+
+.accordion {
+    width:100%;
+    
+    padding:1rem;
+  }
+  
+  .accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: darkolivegreen;
+    color: white;
+    @include font.header(16px);
+  }
+  
+  .accordion-title:hover {
+    background-color: olive;
+  }
+  
+  .accordion-title,
+  .accordion-content {
+    padding: 1rem;
+  }
+  
+  .accordion-content {
+    background-color: darkolivegreen;
+    @include font.body(12px);
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .accordion {
+      width: 100%;
+    }
+  }
+
+  .placeholder {
+      background-color: white;
+      height: 4rem;
+      margin: 1rem;
+  }
