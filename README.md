@@ -48,3 +48,4 @@ In order to transpile Pug templates to JSX and vice versa, the following plugins
 
 ## Resources
 [Pug - JSX Plugin](https://github.com/pugjs/babel-plugin-transform-react-pug)
+[React Accordion Tutorial](https://www.freecodecamp.org/news/build-accordion-menu-in-react-without-external-libraries/)
