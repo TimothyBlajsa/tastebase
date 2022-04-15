@@ -39,11 +39,8 @@ const App = () => {
 
         // Return data
         setRecipes(recipeData);
-        //console.log(recipeData);
-        //console.log(recipeData[1])
-        
     };
-    console.log(recipes)
+
 return (
     <>
     {recipes.map(recipe=>

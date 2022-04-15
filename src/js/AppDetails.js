@@ -115,61 +115,9 @@ const makeCard = (img="", allergens=[], calories=0, time=0) => pug`
 `
 
 const AppDetails = ({img, allergens, calories, time}) => {
-    // const [recipes, setRecipes] = useState([]);
-    // const [query, setQuery] = useState("chicken");
-    // useEffect(() => {
-    //     getRecipes(); // eslint-disable-next-line
-    // }, [query]);
-
-    // // Request search from Edamam
-    // const getRecipes = async () => {
-    //     // Request, recieve, and parse data from API
-    //     const apiID = process.env.API_ID;
-    //     const apiKey = process.env.API_KEY;
-    //     let data = await req(`https://api.edamam.com/search?q=${query}&app_id=${apiID}&app_key=${apiKey}`);
-    //     data = JSON.parse(data);
-
-    //     // Add seleted recipes to output array
-    //     const recipeData = []
-    //     const range = await data.to - data.from;
-    //     for (let i = 0; i < range; i++) {
-    //         recipeData.push({
-    //             "img":          data.hits[i].recipe.image,
-    //             "allergens":    data.hits[i].recipe.healthLabels,
-    //             "calories":     data.hits[i].recipe.calories,
-    //             "time":         data.hits[i].recipe.totalTime,
-    //         });
-    //     }
-
-    //     // Return data
-    //     setRecipes(recipeData);
-    //     //console.log(recipeData);
-    //     //console.log(recipeData[1])
-        
-    // };
-    //console.log(recipes[1]);
-    //const newData = JSON.stringify(recipes[1].img);
-
-    //console.log(Object.values(recipes))
-    //console.log(recipes[1].img)
-    // recipes.map((recipe) => {
-    //     console.log(recipe);
-    // })
-    //let recipeOne = recipes[1].allergens;
-    //console.log(recipeOne)
-    console.log()
-
-var hello = 'hi'
     return pug `
         ${makeCard(img, allergens, calories, time)}
     `
-    
-    // return pug`
-    // ${recipes.forEach(recipe => {
-    //     makeCard(recipe.img, recipe.allergens, recipe.calories, recipe.time);
-    // })}
-    // `
-    //return null
 };
 
 export default AppDetails;
