@@ -34,6 +34,7 @@ const App = () => {
                 "allergens":    data.hits[i].recipe.healthLabels,
                 "calories":     data.hits[i].recipe.calories,
                 "time":         data.hits[i].recipe.totalTime,
+                "title":        data.hits[i].recipe.label,
             });
         }
 
@@ -49,6 +50,7 @@ return (
          allergens = {recipe.allergens}
          calories = {recipe.calories}
          time = {recipe.time}
+         title = {recipe.title}
          >
          
          

@@ -96,7 +96,7 @@ const displayTimeFull = n => {
     }    
 }
 
-const makeCard = (img="", allergens=[], calories=0, time=0) => pug`
+const makeCard = (img="", allergens=[], calories=0, time=0, title="") => pug`
     .card
         .card__display
             .card__liked
@@ -104,7 +104,7 @@ const makeCard = (img="", allergens=[], calories=0, time=0) => pug`
                     path(fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z")
             img.card__img(src=${img})
         .card__info
-            h2.card__name To Be Randomized
+            h2.card__name ${title}
             .card__allergens ${displayAllergens(allergens)}
             .card__rating
                 span.card__stars ${displayStars(stars())}
@@ -114,9 +114,9 @@ const makeCard = (img="", allergens=[], calories=0, time=0) => pug`
                 span.card__time ${displayTimeFull(time)}
 `
 
-const AppDetails = ({img, allergens, calories, time}) => {
+const AppDetails = ({img, allergens, calories, time, title}) => {
     return pug `
-        ${makeCard(img, allergens, calories, time)}
+        ${makeCard(img, allergens, calories, time, title)}
     `
 };
 
